@@ -1,0 +1,925 @@
+/* ========================================================================================================================================================================
+   ----------------------------------ШРИФТЫ--------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* ========================================================================================================================================================================
+   -------------------------------WEB SETTINGS-----------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+html {
+  font-family: "Lato", sans-serif ;
+  font-style: normal;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+
+  max-width: 100vw;
+  min-width: 100vw;
+  width: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  height: 100vh;
+
+  background: url('../img/bg/bg.png') no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, strong {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar-button {
+  background: none;
+  background-repeat:no-repeat;
+  width: 7px;
+  height: 10px
+  }
+  
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #5E6166;
+}
+  
+::-webkit-scrollbar-thumb:hover{
+  background: #5e6166;;
+}
+  
+::-webkit-resizer{
+  background-image: none;
+  background-repeat:no-repeat;
+  width: 4px;
+  height: 0px
+}
+  
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* ========================================================================================================================================================================
+   ---------------------------------КОНТЕЙНЕР------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+.nomad-container {
+  max-width: 249.5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 12px;
+  padding-left: 24px;
+}
+
+.info__container {
+  min-width: 261.5px;
+  max-width: 261.5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+
+.chat__container {
+  max-width: 1299.5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.chat__container.active {
+  max-width: 1561px;
+}
+
+
+/* ========================================================================================================================================================================
+   ---------------------------------СЕКЦИЯ "sidebar"------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+.sidebar {
+  width: 71.5px;
+  min-width: 71.5px;
+  height: 100vh;
+
+  background: #000000ad;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar__wi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+
+  margin-top: 10.5px;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+.sidebar__wi img {
+  filter: saturate(10);
+}
+
+
+.sidebar__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar__list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+
+  width: 40px;
+  height: 40px;
+  opacity: .5;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: box-shadow .3s ease, opacity .3s ease;
+}
+
+.sidebar__list__item:hover {
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .2);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .2);
+  box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .2);
+
+  opacity: 1;
+}
+
+.sidebar__list__item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.sidebar__list__item ion-icon {
+  font-size: 23px;
+  color: #fff;
+}
+
+.sidebar__list__item:first-child {
+  opacity: 1;
+  background: #ff0800;
+}
+
+.sidebar__list__item:nth-child(2) {
+  background: #db1414;
+}
+
+.sidebar__list__item:nth-child(3) {
+  background: #ce5200;
+}
+
+.sidebar__list__item:nth-child(4) {
+  background: #ce0172;
+}
+
+.sidebar__list__item:nth-child(5) {
+  background: #6000ce;
+}
+
+.sidebar__list__item:nth-child(6) {
+  background: #003fb4;
+}
+
+.sidebar__list__item:nth-child(7) {
+  background: #007b91;
+}
+
+
+.sidebar__plus {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+
+  margin-bottom: 15.5px;
+
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.sidebar__plus:hover {
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .1);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .1);
+  box-shadow: 0px 0px 25px 0px rgba(255, 255, 255, .1);
+  transform: rotate(180deg);
+}
+
+.sidebar__plus ion-icon {
+  font-size: 23px;
+  color: #fff;
+  opacity: 1;
+}
+
+
+
+/* ========================================================================================================================================================================
+   ---------------------------------СЕКЦИЯ "nomad"------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+.nomad {
+  width: 256.5px;
+  min-width: 256.5px;
+  height: 100vh;
+
+  overflow-y: scroll;
+
+  background: #25272abd;
+}
+
+.scroll-padding {
+  width: 5px;
+  min-width: 5px;
+  background: #25272A;
+  opacity: 0.75;
+}
+
+.nomad__group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 35.5px;
+  margin-bottom: 30.5px;
+}
+
+.nomad__group__heading {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  margin-bottom: 30.5px;
+  margin-right: 70px;
+}
+
+.nomad__group__heading__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  margin-right: 5px;
+}
+
+.nomad__group__heading ion-icon {
+  margin-top: 2px;
+  font-size: 15px;
+  color: #919191;
+}
+
+.nomad__group__sett {
+  cursor: pointer;
+}
+
+.nomad__group__sett ion-icon {
+  margin-top: 4px;
+  font-size: 20px;
+  color: #919191;
+}
+
+
+.nomad__group__desc {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.nomad__group__desc ion-icon {
+  font-size: 20px;
+  color: #919191;
+
+  margin-right: 11px;
+}
+
+.nomad__group__desc__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919191;
+}
+
+
+
+.nomad__channels {
+  margin-bottom: 7.5px;
+}
+
+.nomad__channels__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.nomad__channels__heading__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919191;
+
+  text-transform: uppercase;
+}
+
+.nomad__channels__heading__numbers {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919191;
+
+  text-transform: uppercase;
+}
+
+
+.nomad__channels__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.nomad__channels__list__item {
+  width: 100%;
+
+  padding: 4px 0px 9px 13px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.nomad__channels__list__item.active {
+  background: #5E6166;
+}
+
+
+.nomad__channels__list__item__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #B5B5B5;
+}
+
+.nomad__channels__list__item.active .nomad__channels__list__item__title {
+  color: #fff;
+}
+
+
+
+.nomad__friends__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.nomad__friends__heading__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919191;
+
+  text-transform: uppercase;
+}
+
+.nomad__friends__heading__numbers {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #919191;
+
+  text-transform: uppercase;
+}
+
+
+.nomad__friends__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  width: 100%;
+}
+
+.nomad__friends__list__item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  cursor: pointer;
+
+  margin-bottom: 12px;
+}
+
+.nomad__friends__list__item__circle {
+  width: 8px;
+  height: 8px;
+  background: #666;
+  border-radius: 50%;
+
+  margin-right: 10px;
+}
+
+.nomad__friends__list__item:nth-child(1) .nomad__friends__list__item__circle,
+.nomad__friends__list__item:nth-child(2) .nomad__friends__list__item__circle {
+  background: #70CC16;
+}
+
+.nomad__friends__list__item__user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #B5B5B5;
+
+  margin-right: 10px;
+}
+
+.nomad__friends__list__item__user ion-icon {
+  font-size: 20px;
+  color: #000;
+}
+
+.nomad__friends__list__item__name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #B5B5B5;
+}
+
+
+/* ========================================================================================================================================================================
+   ---------------------------------СЕКЦИЯ "chat"------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+.chat {
+  width: 100%;
+  max-width: 1325.5px;
+
+  background: #fff;
+  
+  transition: max-width .5s ease;
+}
+
+.chat.active {
+  max-width: 1587px;
+}
+
+
+.chat__header {
+  width: 100%;
+  height: 91px;
+
+  padding-top: 10px;
+
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.chat__header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+
+  transition: max-width .5s ease;
+}
+
+.chat__header__name {
+  display: flex;
+  align-items: center;
+}
+
+.chat__header__name__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+
+  margin-right: 7px;
+}
+
+.chat__header__name ion-icon {
+  font-size: 17px;
+  color: #A4A4A4;
+}
+
+.chat__header__info {
+  display: flex;
+  align-items: center;
+}
+
+.chat__header__info__users {
+  display: flex;
+  align-items: center;
+
+  margin-right: 28px;
+}
+
+.chat__header__info__users ion-icon {
+  font-size: 22px;
+  color: #A4A4A4;
+
+  margin-top: 1px;
+  margin-right: 9px;
+}
+
+.chat__header__info__users__value {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #A4A4A4;
+}
+
+.chat__header__info__form {
+  margin-right: 26px;
+}
+
+.chat__header__info__form input {
+  width: 250px;
+  padding: 8px 19px;
+  border: 0.5px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+
+.chat__header__info__form input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8D8D8D;
+}
+
+.chat__header__info__form input:focus,
+.chat__header__info__form input:active {
+  outline: none;
+}
+
+
+.chat__header__info__notif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  margin-right: 15px;
+}
+
+.chat__header__info__notif ion-icon {
+  font-size: 22px;
+  line-height: 100%;
+  color: #A4A4A4;
+}
+
+.chat__header__info__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.chat__header__info__more ion-icon {
+  font-size: 22px;
+  line-height: 100%;
+  color: #A4A4A4;
+}
+
+
+
+.chat__messages {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+}
+
+.chat__messages__message {
+  display: flex;
+  align-items: flex-start;
+}
+
+.chat__messages__message__user {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  background: #B5B5B5;
+  border-radius: 5px;
+}
+
+.chat__messages__message__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chat__messages__message__text__top {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================================================================================================================
+   ---------------------------------СЕКЦИЯ "info"------------------------------------------------------------------------------------------------------------------------------
+   ======================================================================================================================================================================== */
+.info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 261.5px;
+  height: 100vh;
+
+  background: #ffffffb7;
+
+  transition: right .5s ease;
+}
+
+.info__heading {
+  display: flex;
+  align-items: center;
+
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.info__heading__name {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 100%;
+  color: #000000;
+
+  margin-right: 6.5px;
+}
+
+.info__heading__circle {
+  width: 9px;
+  height: 9px;
+  background: #70CC16;
+  border-radius: 50%;
+}
+
+
+.info__desc {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #5F6164;
+
+  margin-bottom: 25px;
+}
+
+
+.info__soc {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 23px;
+}
+
+.info__soc__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  background: #E8E8EB;
+  border-radius: 50%;
+}
+
+.info__soc__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.info__soc__item ion-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.info__soc__item:not(:first-child) ion-icon {
+  margin-left: 2px;
+}
+
+.info__soc__item:first-child ion-icon {
+  margin-top: 2px;
+}
+
+
+.info__btns {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.info__btns__message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 133.5px;
+  height: 25px;
+  background: #3577EF;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: .9px;
+  color: #FFFFFF;
+
+  margin-right: 5px;
+
+  cursor: pointer;
+}
+
+.info__btns__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  background: #3577EF;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.info__btns__more ion-icon {
+  font-size: 10px;
+  color: #fff;
+}
+
+
+.info__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.info__list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info__list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.info__list__item__title {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  color: #5F6164;
+
+  margin-bottom: 4px;
+}
+
+.info__list__item__value {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  color: #000000;
+
+  text-decoration: none;
+}
+
+
+.burger {
+  position: absolute;
+  right: 28.5px;
+  bottom: 28.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+
+  cursor: pointer;
+
+  transition: transform .3s ease;
+}
+
+.burger ion-icon {
+  font-size: 25px;
+  margin-left: 3px;
+}
+
+
+.burger.active {
+  transform: rotate(180deg);
+}
+
+.info.active {
+  right: -13.6%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
