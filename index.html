@@ -590,11 +590,11 @@
               <input type="search" placeholder="Search...">
             </form>
   
-            <div class="chat__header__info__notif">
+            <div class="chat__header__info__notif icon-btn">
               <ion-icon name="notifications-outline"></ion-icon>
             </div>
   
-            <div class="chat__header__info__more">
+            <div class="chat__header__info__more icon-btn">
               <ion-icon name="ellipsis-vertical"></ion-icon>
             </div>
           
@@ -607,24 +607,145 @@
 
     <div class="chat__messages">
 
-      <div class="chat__messages__message">
+      <div class="chat__container chat__messages__container">
 
-        <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+        <div class="chat__messages__message">
 
-        <div class="chat__messages__message__text">
-          <div class="chat__messages__message__text__top">
-            <h2 class="chat__messages__message__text__top__name">
-              Jeshua Stout
-            </h2>
-            <span class="chat__messages__message__text__top__time">
-              6:38 PM
-            </span>
+          <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+  
+          <div class="chat__messages__message__text">
+            <div class="chat__messages__message__text__top">
+              <h2 class="chat__messages__message__text__top__name">
+                Jeshua Stout
+              </h2>
+              <span class="chat__messages__message__text__top__time">
+                6:38 PM
+              </span>
+            </div>
+            <p class="chat__messages__message__text__title">
+              <a href="">@pierrhack I did for 6 days in Iceland</a>
+            </p>
           </div>
-          <p class="chat__messages__message__text__title">
-            Which country to visit next? This is a photo with my friends - celebrating in Bali <br> my-top-places.jpg
-          </p>
+        
         </div>
-      
+
+        <div class="chat__messages__hr">
+
+          <div class="chat__messages__hr__line"></div>
+
+          <p class="chat__messages__hr__date">
+            Monday, October 22nd
+          </p>
+
+          <div class="chat__messages__hr__line"></div>
+
+        </div>
+
+        <div class="chat__messages__message">
+
+          <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+  
+          <div class="chat__messages__message__text">
+            <div class="chat__messages__message__text__top">
+              <h2 class="chat__messages__message__text__top__name">
+                Harold Adams
+              </h2>
+              <span class="chat__messages__message__text__top__time">
+                5:02 PM
+              </span>
+            </div>
+            <p class="chat__messages__message__text__title">
+              Which country to visit next? This is a photo with my friends - celebrating in Bali <br> <a href="">my-top-places.jpg</a>
+            </p>
+            <img class="chat__messages__message__text__img" src="img/chat/Photo.png" alt="">
+          </div>
+        
+        </div>
+
+        <div class="chat__messages__hr">
+
+          <div class="chat__messages__hr__line"></div>
+
+          <p class="chat__messages__hr__date">
+            Yesterday
+          </p>
+
+          <div class="chat__messages__hr__line"></div>
+
+        </div>
+
+        <div class="chat__messages__message">
+
+          <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+  
+          <div class="chat__messages__message__text">
+            <div class="chat__messages__message__text__top">
+              <h2 class="chat__messages__message__text__top__name">
+                Aada Laine
+              </h2>
+              <span class="chat__messages__message__text__top__time">
+                11:54 PM
+              </span>
+            </div>
+            <p class="chat__messages__message__text__title">
+              <a href="">@har_adams wow it’s amazing, I want to buy a van and travelling next year</a>
+            </p>
+          </div>
+        
+        </div>
+
+        <div class="chat__messages__hr">
+
+          <div class="chat__messages__hr__line"></div>
+
+          <p class="chat__messages__hr__date">
+            Today
+          </p>
+
+          <div class="chat__messages__hr__line"></div>
+
+        </div>
+
+        <div class="chat__messages__message">
+
+          <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+  
+          <div class="chat__messages__message__text">
+            <div class="chat__messages__message__text__top">
+              <h2 class="chat__messages__message__text__top__name">
+                Nala Hester
+              </h2>
+              <span class="chat__messages__message__text__top__time">
+                11:54 PM
+              </span>
+            </div>
+            <p class="chat__messages__message__text__title">
+              Working from a van in Australia isn’t feasible if you need internet. It may have improved over the last years but I spent some time in a camper van around Tasmania and internet was a real problem (and Tasmania is tiny compared to the rest of the country).
+            </p>
+          </div>
+        
+        </div>
+
+        <div class="chat__messages__message">
+
+          <div class="chat__messages__message__user"><ion-icon name="people-sharp"></ion-icon></div>
+  
+          <div class="chat__messages__message__text">
+            <div class="chat__messages__message__text__top">
+              <h2 class="chat__messages__message__text__top__name">
+                Ramon Bateman
+              </h2>
+              <span class="chat__messages__message__text__top__time">
+                11:59 PM
+              </span>
+            </div>
+            <p class="chat__messages__message__text__title">
+              <a href="">@aa_da</a> What's the reason for the van? Saving money or just like to get outside? If you've got a stable source of income you could always do some short term Airbnbs + buy a truck/topper, build a platform in the back. That way you can always convert it back to a truck and sleep in an apartment if you want.
+            </p>
+          </div>
+        
+        </div>
+
       </div>
 
     </div>
@@ -632,7 +753,27 @@
 
     <div class="chat__input">
 
+      <div class="chat__container chat__input__container">
 
+        <div class="chat__input__add icon-btn icon-btn_input">
+          <ion-icon name="attach-outline"></ion-icon>
+        </div>
+
+        <div class="chat__input__micro icon-btn icon-btn_input">
+          <ion-icon name="mic-outline"></ion-icon>
+        </div>
+
+        <form method="dialog" action="" class="chat__input__form">
+
+          <input placeholder="Message in #general" type="text" class="chat__input__form__send">
+
+        </form>
+
+        <div class="chat__input__smile icon-btn icon-btn_input">
+          <ion-icon name="happy-outline"></ion-icon>
+        </div>
+
+      </div>
 
     </div>
 
@@ -643,108 +784,108 @@
 <!-- ========================================================================================================================================================================
      ---------------------------------INFO------------------------------------------------------------------------------------------------------------------------------
      ======================================================================================================================================================================== -->
-  <section class="info">
+    <section class="info">
 
-    <img class="info__user" src="img/info/user.jpg" alt="">
-
-    <div class="info__container">
-
-      <div class="info__heading">
-        <h1 class="info__heading__name">
-          Andrey Riwall
-        </h1>
-        <div class="info__heading__circle"></div>
-      </div>
-
-      <div class="info__desc">
-        Web Developer
-      </div>
-
-      <div class="info__soc">
-        <a href="https://t.me/andrey_riwall" target="_blank" class="info__soc__item">
-          <ion-icon name="paper-plane-sharp"></ion-icon>
-        </a>
-        <a href="https://vk.com/a.riwall" target="_blank" class="info__soc__item">
-          <ion-icon name="logo-vk"></ion-icon>
-        </a>
-        <a href="https://twitter.com/andrey_riwall" target="_blank" class="info__soc__item">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-        <a href="https://github.com/andrey-riwall" target="_blank" class="info__soc__item">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </div>
-
-      <div class="info__btns">
-
-        <button class="info__btns__message">
-          Message
-        </button>
-
-        <button class="info__btns__more">
-          <ion-icon name="caret-down-sharp"></ion-icon>
-        </button>
-
-      </div>
-
-      <ul class="info__list">
-
-        <li class="info__list__item">
-
-          <p class="info__list__item__title">
-            Username
-          </p>
-
-          <h2 class="info__list__item__value">
-            @riwall
-          </h2>
-
-        </li>
-
-
-        <li class="info__list__item">
-
-          <p class="info__list__item__title">
-            Email
-          </p>
-
-          <a href="mailto:andrey-riwall@gmail.com" class="info__list__item__value">
-            andrey-riwall@gmail.com
+      <img class="info__user" src="img/info/user.jpg" alt="">
+  
+      <div class="info__container">
+  
+        <div class="info__heading">
+          <h1 class="info__heading__name">
+            Andrey Riwall
+          </h1>
+          <div class="info__heading__circle"></div>
+        </div>
+  
+        <div class="info__desc">
+          Web Developer
+        </div>
+  
+        <div class="info__soc">
+          <a href="https://t.me/andrey_riwall" target="_blank" class="info__soc__item">
+            <ion-icon name="paper-plane-sharp"></ion-icon>
           </a>
-
-        </li>
-
-
-        <li class="info__list__item">
-
-          <p class="info__list__item__title">
-            Discord
-          </p>
-
-          <h2 class="info__list__item__value">
-            riwall#0957
-          </h2>
-
-        </li>
-
-
-        <li class="info__list__item">
-
-          <p class="info__list__item__title">
-            Timezone
-          </p>
-
-          <h2 class="info__list__item__value">
-            UTF +3
-          </h2>
-
-        </li>
-
-      </ul>
-
-    </div>
-
-  </section>
+          <a href="https://vk.com/a.riwall" target="_blank" class="info__soc__item">
+            <ion-icon name="logo-vk"></ion-icon>
+          </a>
+          <a href="https://twitter.com/andrey_riwall" target="_blank" class="info__soc__item">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a href="https://github.com/andrey-riwall" target="_blank" class="info__soc__item">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </div>
+  
+        <div class="info__btns">
+  
+          <button class="info__btns__message">
+            Message
+          </button>
+  
+          <button class="info__btns__more">
+            <ion-icon name="caret-down-sharp"></ion-icon>
+          </button>
+  
+        </div>
+  
+        <ul class="info__list">
+  
+          <li class="info__list__item">
+  
+            <p class="info__list__item__title">
+              Username
+            </p>
+  
+            <h2 class="info__list__item__value">
+              @riwall
+            </h2>
+  
+          </li>
+  
+  
+          <li class="info__list__item">
+  
+            <p class="info__list__item__title">
+              Email
+            </p>
+  
+            <a href="mailto:andrey-riwall@gmail.com" class="info__list__item__value">
+              andrey-riwall@gmail.com
+            </a>
+  
+          </li>
+  
+  
+          <li class="info__list__item">
+  
+            <p class="info__list__item__title">
+              Discord
+            </p>
+  
+            <h2 class="info__list__item__value">
+              riwall#0957
+            </h2>
+  
+          </li>
+  
+  
+          <li class="info__list__item">
+  
+            <p class="info__list__item__title">
+              Timezone
+            </p>
+  
+            <h2 class="info__list__item__value">
+              UTF +3
+            </h2>
+  
+          </li>
+  
+        </ul>
+  
+      </div>
+  
+    </section>
 
   <button class="burger">
     <ion-icon name="chevron-forward-sharp"></ion-icon>

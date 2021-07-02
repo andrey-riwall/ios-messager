@@ -1,30 +1,18 @@
-// CALC WIDTH SECTION.CHAT
-var chatWidth = document.querySelector('.chat'); //width chat
-var sideBarWidth = document.querySelector('.sidebar').getBoundingClientRect().width //width sidebar
-var nomadWidth = document.querySelector('.nomad').getBoundingClientRect().width //width nomad
-var scrollpaddingWidth = document.querySelector('.scroll-padding').getBoundingClientRect().width //width scroll-padding
-var infoWidth = document.querySelector('.info').getBoundingClientRect().width; //width info
-var calcWidth = window.innerWidth - sideBarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
-console.log(calcWidth);
-
-chatWidth.style.width = calcWidth + "px";
-
 // ACTIVE FOR ANIMATED DOM
 let menuToggle = document.querySelector('.burger'); //rotate arrow in burger
 let info = document.querySelector('.info'); //translateX section.info
 let chat = document.querySelector('.chat'); //max-width section.chat
-let chatContainer = document.querySelector('.chat__container'); //max-width chat__container
+let chatContainer = document.querySelectorAll('.chat__container'); //max-width chat__container
+let sendInput = document.querySelector('.chat__input__form__send'); //min-width input
 
 menuToggle.onclick = function() { //on click add class "active"
   menuToggle.classList.toggle('active'); //burger
   info.classList.toggle('active'); //section.info
   chat.classList.toggle('active'); //section.chat
-  chatContainer.classList.toggle('active'); //chat__container
-  calcWidth += infoWidth; //section.chat width
-  console.log(calcWidth + '2');
-  chatWidth.style.width = calcWidth + "px"; //section.chat add style width
+  sendInput.classList.toggle('active'); //send.input
+  chatContainer.forEach(el => {el.classList.toggle('active')});
+  //chatContainer.classList.toggle('active'); //chat__container
 }
-
 
 // BACKGROUND FOR ACTIVE BUTTON IN CHANNEL
 let tagToggle = document.querySelectorAll('.nomad__channels__list__item'); //bg nomad__channels__list__item

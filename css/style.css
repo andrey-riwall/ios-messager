@@ -18,10 +18,10 @@ body {
   display: flex;
 
   max-width: 100vw;
-  min-width: 100vw;
+  min-width: 1920px;
   width: 100vh;
   max-height: 100vh;
-  min-height: 100vh;
+  min-height: 1080px;
   height: 100vh;
 
   background: url('../img/bg/bg.png') no-repeat;
@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 
 .chat__container {
   max-width: 1299.5px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 10px;
@@ -500,8 +501,12 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
    ---------------------------------СЕКЦИЯ "chat"------------------------------------------------------------------------------------------------------------------------------
    ======================================================================================================================================================================== */
 .chat {
-  max-width: 1325.5px;
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
+  max-width: 1325.5px;
+  height: 100vh;
 
   background: #fff;
   
@@ -509,8 +514,7 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 }
 
 .chat.active {
-  max-width: 1587px;
-  width: 1587px
+  max-width: 1587px
 }
 
 
@@ -572,6 +576,24 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
   margin-right: 9px;
 }
 
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.icon-btn ion-icon {
+  font-size: 22px;
+  line-height: 100%;
+  color: #A4A4A4;
+}
+
 .chat__header__info__users__value {
   font-weight: 400;
   font-size: 16px;
@@ -604,55 +626,34 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 
 
 .chat__header__info__notif {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-
-  cursor: pointer;
-
   margin-right: 15px;
 }
-
-.chat__header__info__notif ion-icon {
-  font-size: 22px;
-  line-height: 100%;
-  color: #A4A4A4;
-}
-
-.chat__header__info__more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-
-  cursor: pointer;
-}
-
-.chat__header__info__more ion-icon {
-  font-size: 22px;
-  line-height: 100%;
-  color: #A4A4A4;
-}
-
-
 
 .chat__messages {
   width: 100%;
   height: 100%;
 
+  padding-top: 18px;
+  padding-bottom: 18px;
+
   overflow-y: scroll;
+}
+
+.chat__messages__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 100%;
+
+  transition: max-width .5s ease;
 }
 
 .chat__messages__message {
   display: flex;
-  align-items: flex-start;
+  justify-content: start;
+
+  padding: 7px 0px 7px 0px;
 }
 
 .chat__messages__message__user {  
@@ -660,11 +661,17 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
   align-items: center;
   justify-content: center;
 
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
 
   background: #B5B5B5;
   border-radius: 5px;
+
+  margin-right: 15px;
+
+  cursor: pointer;
 }
 
 .chat__messages__message__text {
@@ -673,13 +680,144 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
   align-items: flex-start;
 }
 
+.chat__messages__message__text__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.chat__messages__message__text__title a {
+  color: #3577EF;
+
+  text-decoration: none;
+}
+
 .chat__messages__message__text__top {
   display: flex;
   align-items: center;
+
+  margin-bottom: 3px;
+}
+
+.chat__messages__message__text__top__name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+
+  margin-right: 10px;
+
+  cursor: pointer;
+}
+
+.chat__messages__message__text__top__time {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #8D8D8D;
+}
+
+.chat__messages__message__text__img {
+  width: calc(266px * 1.2);
+
+  border-radius: 5px;
+
+  margin-top: 10px;
+
+}
+
+.chat__messages__hr {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 0px;
+}
+
+.chat__messages__hr__line {
+  width: 100%;
+  height: 1px;
+
+  background: #E0E0E0;
+}
+
+.chat__messages__hr__date {
+  white-space: nowrap;
+  padding: 0px 17px;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #8D8D8D;
+
+  margin-bottom: 2px;
 }
 
 
 
+
+.chat__input {
+  width: 100%;
+  height: 91px;
+
+  border-top: 1px solid #E0E0E0;
+}
+
+.chat__input__container {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  transition: max-width .5s ease;
+}
+
+.icon-btn_input {
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  min-height: 35px;
+}
+
+.icon-btn_input ion-icon {
+  font-size: 30px;
+}
+
+.chat__input__add {
+  margin-right: 10px;
+}
+
+.chat__input__micro {
+  margin-right: 12px;
+}
+
+.chat__input__form__send {
+  min-width: 1151.5px;
+  height: 50%;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #8D8D8D;
+
+  transition: min-width .5s ease;
+}
+
+.chat__input__form__send.active {
+  min-width: 1350px;
+}
+
+.chat__input__form__send:focus,
+.chat__input__form__send:active {
+  outline: none;
+}
+
+.chat__input__form__send::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #8D8D8D;
+}
 
 
 
@@ -715,7 +853,7 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 }
 
 .info.active {
-  right: -13.6%;
+  right: -262px;
 }
 
 .info__heading {
