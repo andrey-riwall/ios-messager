@@ -1,10 +1,10 @@
 // CALC WIDTH SECTION.CHAT
 var chatWidth = document.querySelector('.chat'); //width chat
-var sidebarWidth = document.querySelector('.sidebar').getBoundingClientRect().width //width sidebar
+var sideBarWidth = document.querySelector('.sidebar').getBoundingClientRect().width //width sidebar
 var nomadWidth = document.querySelector('.nomad').getBoundingClientRect().width //width nomad
 var scrollpaddingWidth = document.querySelector('.scroll-padding').getBoundingClientRect().width //width scroll-padding
 var infoWidth = document.querySelector('.info').getBoundingClientRect().width; //width info
-var calcWidth = window.innerWidth - sidebarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
+var calcWidth = window.innerWidth - sideBarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
 console.log(calcWidth);
 
 chatWidth.style.width = calcWidth + "px";
