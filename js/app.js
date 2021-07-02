@@ -1,13 +1,26 @@
+// CALC WIDTH SECTION.CHAT
+var chatWidth = document.querySelector('.chat'); //width chat
+var sidebarWidth = document.querySelector('.sidebar').getBoundingClientRect().width //width sidebar
+var nomadWidth = document.querySelector('.nomad').getBoundingClientRect().width //width nomad
+var scrollpaddingWidth = document.querySelector('.scroll-padding').getBoundingClientRect().width //width scroll-padding
+var infoWidth = document.querySelector('.info').getBoundingClientRect().width; //width info
+var calcWidth = screen.availWidth - sidebarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
+
+chatWidth.style.width = calcWidth + "px";
+
 // ACTIVE FOR ANIMATED DOM
 let menuToggle = document.querySelector('.burger'); //rotate arrow in burger
 let info = document.querySelector('.info'); //translateX section.info
 let chat = document.querySelector('.chat'); //max-width section.chat
 let chatContainer = document.querySelector('.chat__container'); //max-width chat__container
+
 menuToggle.onclick = function() { //on click add class "active"
   menuToggle.classList.toggle('active'); //burger
   info.classList.toggle('active'); //section.info
   chat.classList.toggle('active'); //section.chat
   chatContainer.classList.toggle('active'); //chat__container
+  calcWidth += infoWidth; //section.chat width
+  chatWidth.style.width = calcWidth + "px"; //section.chat add style width
 }
 
 
@@ -45,9 +58,7 @@ channels.forEach(el => {
 });
 
 
-
-
-
+// ADD NEW DOM
 var lastChild = document.querySelector('#lastChild');
 
 var newChat = document.createElement('div');

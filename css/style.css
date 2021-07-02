@@ -500,8 +500,8 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
    ---------------------------------СЕКЦИЯ "chat"------------------------------------------------------------------------------------------------------------------------------
    ======================================================================================================================================================================== */
 .chat {
-  width: 100%;
   max-width: 1325.5px;
+  width: 100%;
 
   background: #fff;
   
@@ -510,6 +510,7 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 
 .chat.active {
   max-width: 1587px;
+  width: 1587px
 }
 
 
@@ -710,7 +711,11 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
 
   background: #ffffffb7;
 
-  transition: right .5s ease;
+  transition: right .5s ease, transform .5s ease;
+}
+
+.info.active {
+  right: -13.6%;
 }
 
 .info__heading {
@@ -898,9 +903,7 @@ h1, h2, h3, h4, h5, h6, p, span, strong {
   transform: rotate(180deg);
 }
 
-.info.active {
-  right: -13.6%;
-}
+
 
 
 
