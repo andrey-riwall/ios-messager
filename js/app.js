@@ -4,7 +4,8 @@ var sidebarWidth = document.querySelector('.sidebar').getBoundingClientRect().wi
 var nomadWidth = document.querySelector('.nomad').getBoundingClientRect().width //width nomad
 var scrollpaddingWidth = document.querySelector('.scroll-padding').getBoundingClientRect().width //width scroll-padding
 var infoWidth = document.querySelector('.info').getBoundingClientRect().width; //width info
-var calcWidth = screen.availWidth - sidebarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
+var calcWidth = window.innerWidth - sidebarWidth - nomadWidth - scrollpaddingWidth - infoWidth; //calc
+console.log(calcWidth);
 
 chatWidth.style.width = calcWidth + "px";
 
@@ -20,6 +21,7 @@ menuToggle.onclick = function() { //on click add class "active"
   chat.classList.toggle('active'); //section.chat
   chatContainer.classList.toggle('active'); //chat__container
   calcWidth += infoWidth; //section.chat width
+  console.log(calcWidth + '2');
   chatWidth.style.width = calcWidth + "px"; //section.chat add style width
 }
 
